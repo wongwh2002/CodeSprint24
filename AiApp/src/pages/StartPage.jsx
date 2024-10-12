@@ -12,7 +12,7 @@ const StartPage = () => {
                     <img src='../../port_image.png' className="col-span-1"/>
                 </div>
                 <div className="flex flex-col text-left col-span-1 p-10 justify-center">
-                    <div className="font-bold m-5 mb-20">
+                    <div className="font-bold m-5 mb-10">
                         <a className="text-4xl">The World's </a>
                         <br /> 
                         <a className="text-6xl">Port of Call </a>
