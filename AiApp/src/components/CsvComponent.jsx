@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Papa from 'papaparse';
 
-const CsvComponent = () => {
+const CsvComponent = ({ prompt }) => {
   const [csvData, setCsvData] = useState([]);
 
   const handleFileUpload = (e) => {
@@ -19,13 +19,16 @@ const CsvComponent = () => {
   };
 
   return (
-    <div className='bg-[#bbbbbb]'>
-      <input type="file" accept=".csv" onChange={handleFileUpload} />
-      <div>
-        {csvData.map((row, index) => (
-          <MyComponent key={index} data={row} />
-        ))}
-      </div>
+    <div className=''>
+        <div className='flex flex-row space-x-5'>
+            <div className="text-xl font-semibold"> {prompt} </div>
+            <input type="file" accept=".csv" onChange={handleFileUpload} />
+        </div>
+        <div>
+            {csvData.map((row, index) => (
+            <MyComponent key={index} data={row} />
+            ))}
+        </div>
     </div>
   );
 };

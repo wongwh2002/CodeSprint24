@@ -11,7 +11,7 @@ const CargoGrid = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-3 gap-2 text-xl">
+    <div className="grid grid-cols-[300px_300px_300px] gap-2 text-xl">
       {cargoData.map((cargo, index) => (
         <React.Fragment key={index}>
           <div className='col-span-3 h-0.5 bg-[#dddddd] rounded'/>
