@@ -1,0 +1,407 @@
+Origin,Destination,Duration
+Tuas,Jakarta,35.4
+Tuas,Ameya,202.14
+Tuas,Sical,141.82
+Tuas,Baranagar,125.67
+Tuas,Laem Chabang,64.05
+Tuas,Thai Connectivity,64.05
+Tuas,Cang Container Quoc Te,52.09
+Tuas,Tan Cang Que Vo,107.04
+Tuas,Qinzhou,108.85
+Tuas,Guang Zhou,117.77
+Tuas,Fuzhou,145.48
+Tuas,DingShuZhen,177.49
+Tuas,TianJin,225.09
+Tuas,Dalian,212.98
+Tuas,Hanjin Incheon,211.21
+Tuas,Busan,214.43
+Tuas,Hibikimachi,211.91
+Jurong,Jakarta,35.4
+Jurong,Ameya,202.14
+Jurong,Sical,141.82
+Jurong,Baranagar,125.67
+Jurong,Laem Chabang,64.05
+Jurong,Thai Connectivity,64.05
+Jurong,Cang Container Quoc Te,52.09
+Jurong,Tan Cang Que Vo,107.04
+Jurong,Qinzhou,108.85
+Jurong,Guang Zhou,117.77
+Jurong,Fuzhou,145.48
+Jurong,DingShuZhen,177.49
+Jurong,TianJin,225.09
+Jurong,Dalian,212.98
+Jurong,Hanjin Incheon,211.21
+Jurong,Busan,214.43
+Jurong,Hibikimachi,211.91
+Pasir Panjang,Jakarta,35.4
+Pasir Panjang,Ameya,202.14
+Pasir Panjang,Sical,141.82
+Pasir Panjang,Baranagar,125.67
+Pasir Panjang,Laem Chabang,64.05
+Pasir Panjang,Thai Connectivity,64.05
+Pasir Panjang,Cang Container Quoc Te,52.09
+Pasir Panjang,Tan Cang Que Vo,107.04
+Pasir Panjang,Qinzhou,108.85
+Pasir Panjang,Guang Zhou,117.77
+Pasir Panjang,Fuzhou,145.48
+Pasir Panjang,DingShuZhen,177.49
+Pasir Panjang,TianJin,225.09
+Pasir Panjang,Dalian,212.98
+Pasir Panjang,Hanjin Incheon,211.21
+Pasir Panjang,Busan,214.43
+Pasir Panjang,Hibikimachi,211.91
+Brani,Jakarta,35.4
+Brani,Ameya,202.14
+Brani,Sical,141.82
+Brani,Baranagar,125.67
+Brani,Laem Chabang,64.05
+Brani,Thai Connectivity,64.05
+Brani,Cang Container Quoc Te,52.09
+Brani,Tan Cang Que Vo,107.04
+Brani,Qinzhou,108.85
+Brani,Guang Zhou,117.77
+Brani,Fuzhou,145.48
+Brani,DingShuZhen,177.49
+Brani,TianJin,225.09
+Brani,Dalian,212.98
+Brani,Hanjin Incheon,211.21
+Brani,Busan,214.43
+Brani,Hibikimachi,211.91
+Jakarta,Tuas,35.4
+Jakarta,Jurong,35.4
+Jakarta,Pasir Panjang,35.4
+Jakarta,Brani,35.4
+Jakarta,Ameya,227.33
+Jakarta,Sical,167.0
+Jakarta,Baranagar,161.07
+Jakarta,Laem Chabang,99.45
+Jakarta,Thai Connectivity,99.45
+Jakarta,Cang Container Quoc Te,87.49
+Jakarta,Tan Cang Que Vo,130.44
+Jakarta,Qinzhou,132.26
+Jakarta,Guang Zhou,141.18
+Jakarta,Fuzhou,168.66
+Jakarta,DingShuZhen,200.67
+Jakarta,TianJin,248.26
+Jakarta,Dalian,236.16
+Jakarta,Hanjin Incheon,234.38
+Jakarta,Busan,237.6
+Jakarta,Hibikimachi,235.08
+Ameya,Tuas,202.14
+Ameya,Jurong,202.14
+Ameya,Pasir Panjang,202.14
+Ameya,Brani,202.14
+Ameya,Jakarta,227.33
+Ameya,Sical,60.33
+Ameya,Baranagar,122.05
+Ameya,Laem Chabang,266.2
+Ameya,Thai Connectivity,266.2
+Ameya,Cang Container Quoc Te,254.23
+Ameya,Tan Cang Que Vo,309.19
+Ameya,Qinzhou,311.0
+Ameya,Guang Zhou,319.92
+Ameya,Fuzhou,347.63
+Ameya,DingShuZhen,379.64
+Ameya,TianJin,427.23
+Ameya,Dalian,415.13
+Ameya,Hanjin Incheon,413.35
+Ameya,Busan,416.57
+Ameya,Hibikimachi,414.05
+Sical,Tuas,141.82
+Sical,Jurong,141.82
+Sical,Pasir Panjang,141.82
+Sical,Brani,141.82
+Sical,Jakarta,167.0
+Sical,Ameya,60.33
+Sical,Baranagar,61.72
+Sical,Laem Chabang,205.87
+Sical,Thai Connectivity,205.87
+Sical,Cang Container Quoc Te,193.9
+Sical,Tan Cang Que Vo,248.86
+Sical,Qinzhou,250.67
+Sical,Guang Zhou,259.59
+Sical,Fuzhou,287.3
+Sical,DingShuZhen,319.31
+Sical,TianJin,366.91
+Sical,Dalian,354.8
+Sical,Hanjin Incheon,353.02
+Sical,Busan,356.24
+Sical,Hibikimachi,353.73
+Baranagar,Tuas,125.67
+Baranagar,Jurong,125.67
+Baranagar,Pasir Panjang,125.67
+Baranagar,Brani,125.67
+Baranagar,Jakarta,161.07
+Baranagar,Ameya,122.05
+Baranagar,Sical,61.72
+Baranagar,Laem Chabang,189.72
+Baranagar,Thai Connectivity,189.72
+Baranagar,Cang Container Quoc Te,177.76
+Baranagar,Tan Cang Que Vo,232.71
+Baranagar,Qinzhou,234.52
+Baranagar,Guang Zhou,243.45
+Baranagar,Fuzhou,271.15
+Baranagar,DingShuZhen,303.16
+Baranagar,TianJin,350.76
+Baranagar,Dalian,338.65
+Baranagar,Hanjin Incheon,336.88
+Baranagar,Busan,340.1
+Baranagar,Hibikimachi,337.58
+Laem Chabang,Tuas,64.05
+Laem Chabang,Jurong,64.05
+Laem Chabang,Pasir Panjang,64.05
+Laem Chabang,Brani,64.05
+Laem Chabang,Jakarta,99.45
+Laem Chabang,Ameya,266.2
+Laem Chabang,Sical,205.87
+Laem Chabang,Baranagar,189.72
+Laem Chabang,Cang Container Quoc Te,44.59
+Laem Chabang,Tan Cang Que Vo,105.44
+Laem Chabang,Qinzhou,107.25
+Laem Chabang,Guang Zhou,116.17
+Laem Chabang,Fuzhou,143.88
+Laem Chabang,DingShuZhen,175.89
+Laem Chabang,TianJin,223.49
+Laem Chabang,Dalian,211.38
+Laem Chabang,Hanjin Incheon,209.6
+Laem Chabang,Busan,212.82
+Laem Chabang,Hibikimachi,210.31
+Thai Connectivity,Tuas,64.05
+Thai Connectivity,Jurong,64.05
+Thai Connectivity,Pasir Panjang,64.05
+Thai Connectivity,Brani,64.05
+Thai Connectivity,Jakarta,99.45
+Thai Connectivity,Ameya,266.2
+Thai Connectivity,Sical,205.87
+Thai Connectivity,Baranagar,189.72
+Thai Connectivity,Cang Container Quoc Te,44.59
+Thai Connectivity,Tan Cang Que Vo,105.44
+Thai Connectivity,Qinzhou,107.25
+Thai Connectivity,Guang Zhou,116.17
+Thai Connectivity,Fuzhou,143.88
+Thai Connectivity,DingShuZhen,175.89
+Thai Connectivity,TianJin,223.49
+Thai Connectivity,Dalian,211.38
+Thai Connectivity,Hanjin Incheon,209.6
+Thai Connectivity,Busan,212.82
+Thai Connectivity,Hibikimachi,210.31
+Cang Container Quoc Te,Tuas,52.09
+Cang Container Quoc Te,Jurong,52.09
+Cang Container Quoc Te,Pasir Panjang,52.09
+Cang Container Quoc Te,Brani,52.09
+Cang Container Quoc Te,Jakarta,87.49
+Cang Container Quoc Te,Ameya,254.23
+Cang Container Quoc Te,Sical,193.9
+Cang Container Quoc Te,Baranagar,177.76
+Cang Container Quoc Te,Laem Chabang,44.59
+Cang Container Quoc Te,Thai Connectivity,44.59
+Cang Container Quoc Te,Tan Cang Que Vo,60.85
+Cang Container Quoc Te,Qinzhou,62.67
+Cang Container Quoc Te,Guang Zhou,71.59
+Cang Container Quoc Te,Fuzhou,99.29
+Cang Container Quoc Te,DingShuZhen,131.31
+Cang Container Quoc Te,TianJin,178.9
+Cang Container Quoc Te,Dalian,166.8
+Cang Container Quoc Te,Hanjin Incheon,165.02
+Cang Container Quoc Te,Busan,168.24
+Cang Container Quoc Te,Hibikimachi,165.72
+Tan Cang Que Vo,Tuas,107.04
+Tan Cang Que Vo,Jurong,107.04
+Tan Cang Que Vo,Pasir Panjang,107.04
+Tan Cang Que Vo,Brani,107.04
+Tan Cang Que Vo,Jakarta,130.44
+Tan Cang Que Vo,Ameya,309.19
+Tan Cang Que Vo,Sical,248.86
+Tan Cang Que Vo,Baranagar,232.71
+Tan Cang Que Vo,Laem Chabang,105.44
+Tan Cang Que Vo,Thai Connectivity,105.44
+Tan Cang Que Vo,Cang Container Quoc Te,60.85
+Tan Cang Que Vo,Qinzhou,14.95
+Tan Cang Que Vo,Guang Zhou,40.8
+Tan Cang Que Vo,Fuzhou,68.51
+Tan Cang Que Vo,DingShuZhen,100.52
+Tan Cang Que Vo,TianJin,148.12
+Tan Cang Que Vo,Dalian,136.01
+Tan Cang Que Vo,Hanjin Incheon,134.23
+Tan Cang Que Vo,Busan,137.45
+Tan Cang Que Vo,Hibikimachi,134.93
+Qinzhou,Tuas,108.85
+Qinzhou,Jurong,108.85
+Qinzhou,Pasir Panjang,108.85
+Qinzhou,Brani,108.85
+Qinzhou,Jakarta,132.26
+Qinzhou,Ameya,311.0
+Qinzhou,Sical,250.67
+Qinzhou,Baranagar,234.52
+Qinzhou,Laem Chabang,107.25
+Qinzhou,Thai Connectivity,107.25
+Qinzhou,Cang Container Quoc Te,62.67
+Qinzhou,Tan Cang Que Vo,14.95
+Qinzhou,Guang Zhou,37.5
+Qinzhou,Fuzhou,65.21
+Qinzhou,DingShuZhen,97.22
+Qinzhou,TianJin,144.82
+Qinzhou,Dalian,132.71
+Qinzhou,Hanjin Incheon,130.94
+Qinzhou,Busan,134.16
+Qinzhou,Hibikimachi,131.64
+Guang Zhou,Tuas,117.77
+Guang Zhou,Jurong,117.77
+Guang Zhou,Pasir Panjang,117.77
+Guang Zhou,Brani,117.77
+Guang Zhou,Jakarta,141.18
+Guang Zhou,Ameya,319.92
+Guang Zhou,Sical,259.59
+Guang Zhou,Baranagar,243.45
+Guang Zhou,Laem Chabang,116.17
+Guang Zhou,Thai Connectivity,116.17
+Guang Zhou,Cang Container Quoc Te,71.59
+Guang Zhou,Tan Cang Que Vo,40.8
+Guang Zhou,Qinzhou,37.5
+Guang Zhou,Fuzhou,38.7
+Guang Zhou,DingShuZhen,70.71
+Guang Zhou,TianJin,118.31
+Guang Zhou,Dalian,106.2
+Guang Zhou,Hanjin Incheon,104.43
+Guang Zhou,Busan,107.65
+Guang Zhou,Hibikimachi,105.13
+Fuzhou,Tuas,145.48
+Fuzhou,Jurong,145.48
+Fuzhou,Pasir Panjang,145.48
+Fuzhou,Brani,145.48
+Fuzhou,Jakarta,168.66
+Fuzhou,Ameya,347.63
+Fuzhou,Sical,287.3
+Fuzhou,Baranagar,271.15
+Fuzhou,Laem Chabang,143.88
+Fuzhou,Thai Connectivity,143.88
+Fuzhou,Cang Container Quoc Te,99.29
+Fuzhou,Tan Cang Que Vo,68.51
+Fuzhou,Qinzhou,65.21
+Fuzhou,Guang Zhou,38.7
+Fuzhou,DingShuZhen,32.01
+Fuzhou,TianJin,79.61
+Fuzhou,Dalian,67.5
+Fuzhou,Hanjin Incheon,65.72
+Fuzhou,Busan,68.94
+Fuzhou,Hibikimachi,66.43
+DingShuZhen,Tuas,177.49
+DingShuZhen,Jurong,177.49
+DingShuZhen,Pasir Panjang,177.49
+DingShuZhen,Brani,177.49
+DingShuZhen,Jakarta,200.67
+DingShuZhen,Ameya,379.64
+DingShuZhen,Sical,319.31
+DingShuZhen,Baranagar,303.16
+DingShuZhen,Laem Chabang,175.89
+DingShuZhen,Thai Connectivity,175.89
+DingShuZhen,Cang Container Quoc Te,131.31
+DingShuZhen,Tan Cang Que Vo,100.52
+DingShuZhen,Qinzhou,97.22
+DingShuZhen,Guang Zhou,70.71
+DingShuZhen,Fuzhou,32.01
+DingShuZhen,TianJin,57.75
+DingShuZhen,Dalian,45.64
+DingShuZhen,Hanjin Incheon,43.87
+DingShuZhen,Busan,47.09
+DingShuZhen,Hibikimachi,44.57
+TianJin,Tuas,225.09
+TianJin,Jurong,225.09
+TianJin,Pasir Panjang,225.09
+TianJin,Brani,225.09
+TianJin,Jakarta,248.26
+TianJin,Ameya,427.23
+TianJin,Sical,366.91
+TianJin,Baranagar,350.76
+TianJin,Laem Chabang,223.49
+TianJin,Thai Connectivity,223.49
+TianJin,Cang Container Quoc Te,178.9
+TianJin,Tan Cang Que Vo,148.12
+TianJin,Qinzhou,144.82
+TianJin,Guang Zhou,118.31
+TianJin,Fuzhou,79.61
+TianJin,DingShuZhen,57.75
+TianJin,Dalian,14.39
+TianJin,Hanjin Incheon,31.64
+TianJin,Busan,59.83
+TianJin,Hibikimachi,57.31
+Dalian,Tuas,212.98
+Dalian,Jurong,212.98
+Dalian,Pasir Panjang,212.98
+Dalian,Brani,212.98
+Dalian,Jakarta,236.16
+Dalian,Ameya,415.13
+Dalian,Sical,354.8
+Dalian,Baranagar,338.65
+Dalian,Laem Chabang,211.38
+Dalian,Thai Connectivity,211.38
+Dalian,Cang Container Quoc Te,166.8
+Dalian,Tan Cang Que Vo,136.01
+Dalian,Qinzhou,132.71
+Dalian,Guang Zhou,106.2
+Dalian,Fuzhou,67.5
+Dalian,DingShuZhen,45.64
+Dalian,TianJin,14.39
+Dalian,Hanjin Incheon,18.73
+Dalian,Busan,47.73
+Dalian,Hibikimachi,45.21
+Hanjin Incheon,Tuas,211.21
+Hanjin Incheon,Jurong,211.21
+Hanjin Incheon,Pasir Panjang,211.21
+Hanjin Incheon,Brani,211.21
+Hanjin Incheon,Jakarta,234.38
+Hanjin Incheon,Ameya,413.35
+Hanjin Incheon,Sical,353.02
+Hanjin Incheon,Baranagar,336.88
+Hanjin Incheon,Laem Chabang,209.6
+Hanjin Incheon,Thai Connectivity,209.6
+Hanjin Incheon,Cang Container Quoc Te,165.02
+Hanjin Incheon,Tan Cang Que Vo,134.23
+Hanjin Incheon,Qinzhou,130.94
+Hanjin Incheon,Guang Zhou,104.43
+Hanjin Incheon,Fuzhou,65.72
+Hanjin Incheon,DingShuZhen,43.87
+Hanjin Incheon,TianJin,31.64
+Hanjin Incheon,Dalian,18.73
+Hanjin Incheon,Busan,39.5
+Hanjin Incheon,Hibikimachi,36.98
+Busan,Tuas,214.43
+Busan,Jurong,214.43
+Busan,Pasir Panjang,214.43
+Busan,Brani,214.43
+Busan,Jakarta,237.6
+Busan,Ameya,416.57
+Busan,Sical,356.24
+Busan,Baranagar,340.1
+Busan,Laem Chabang,212.82
+Busan,Thai Connectivity,212.82
+Busan,Cang Container Quoc Te,168.24
+Busan,Tan Cang Que Vo,137.45
+Busan,Qinzhou,134.16
+Busan,Guang Zhou,107.65
+Busan,Fuzhou,68.94
+Busan,DingShuZhen,47.09
+Busan,TianJin,59.83
+Busan,Dalian,47.73
+Busan,Hanjin Incheon,39.5
+Busan,Hibikimachi,12.31
+Hibikimachi,Tuas,211.91
+Hibikimachi,Jurong,211.91
+Hibikimachi,Pasir Panjang,211.91
+Hibikimachi,Brani,211.91
+Hibikimachi,Jakarta,235.08
+Hibikimachi,Ameya,414.05
+Hibikimachi,Sical,353.73
+Hibikimachi,Baranagar,337.58
+Hibikimachi,Laem Chabang,210.31
+Hibikimachi,Thai Connectivity,210.31
+Hibikimachi,Cang Container Quoc Te,165.72
+Hibikimachi,Tan Cang Que Vo,134.93
+Hibikimachi,Qinzhou,131.64
+Hibikimachi,Guang Zhou,105.13
+Hibikimachi,Fuzhou,66.43
+Hibikimachi,DingShuZhen,44.57
+Hibikimachi,TianJin,57.31
+Hibikimachi,Dalian,45.21
+Hibikimachi,Hanjin Incheon,36.98
+Hibikimachi,Busan,12.31

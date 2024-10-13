@@ -1,5 +1,6 @@
 import searoute as sr
 import folium
+import csv
 
 portData = [
     {
@@ -141,7 +142,15 @@ fixed_time = {
     (port1, port2): adjacency_matrix[port1][port2]
     for port1 in adjacency_matrix
     for port2 in adjacency_matrix[port1]
+    if adjacency_matrix[port1][port2] != 0
 }
+
+# Save the fixed_time data to a CSV file
+with open('shipping_routes.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['Origin', 'Destination', 'Duration'])
+    for (port1, port2), duration in fixed_time.items():
+        writer.writerow([port1, port2, duration])
 
 # print(fixed_time)pi
 
@@ -151,49 +160,50 @@ fixed_time = {
 
 # Define origin and destination points
 # Define a list of colors for different ports
-colors = ['blue', 'red', 'green', 'purple', 'orange', 'brown', 'pink', 'gray', 'cyan']
+def doStuff():
+    colors = ['blue', 'red', 'green', 'purple', 'orange', 'brown', 'pink', 'gray', 'cyan']
 
-# Create a map object centered at the first port
-m = folium.Map(location=[portData[0]["Location"]["lat"], portData[0]["Location"]["lng"]], zoom_start=3)
+    # Create a map object centered at the first port
+    m = folium.Map(location=[portData[0]["Location"]["lat"], portData[0]["Location"]["lng"]], zoom_start=3)
 
-# Draw lines for each port's outgoing edges
-for i, port1 in enumerate(portData):
-    color = colors[i % len(colors)]
-    for port2 in portData:
-        if port1["PortName"] != port2["PortName"]:
-            origin = [port1["Location"]["lng"], port1["Location"]["lat"]]
-            destination = [port2["Location"]["lng"], port2["Location"]["lat"]]
-            route = sr.searoute(origin, destination, speed_knot=12.5, units="naut")
-            coordinates = route['geometry']['coordinates']
-            coordinates = [[coord[1], coord[0]] for coord in coordinates]
-            folium.PolyLine(locations=coordinates, color=color, weight=1).add_to(m)
+    # Draw lines for each port's outgoing edges
+    for i, port1 in enumerate(portData):
+        color = colors[i % len(colors)]
+        for port2 in portData:
+            if port1["PortName"] != port2["PortName"]:
+                origin = [port1["Location"]["lng"], port1["Location"]["lat"]]
+                destination = [port2["Location"]["lng"], port2["Location"]["lat"]]
+                route = sr.searoute(origin, destination, speed_knot=12.5, units="naut")
+                coordinates = route['geometry']['coordinates']
+                coordinates = [[coord[1], coord[0]] for coord in coordinates]
+                folium.PolyLine(locations=coordinates, color=color, weight=1).add_to(m)
 
-# Save the map object as an HTML file
-m.save('map.html')
+    # Save the map object as an HTML file
+    m.save('map.html')
 
-# Find the longest path in the adjacency matrix
-longest_path = max(fixed_time, key=fixed_time.get)
-longest_duration = fixed_time[longest_path]
+    # Find the longest path in the adjacency matrix
+    longest_path = max(fixed_time, key=fixed_time.get)
+    longest_duration = fixed_time[longest_path]
 
-# Extract the origin and destination ports
-origin_port, destination_port = longest_path
+    # Extract the origin and destination ports
+    origin_port, destination_port = longest_path
 
-# Get the coordinates for the origin and destination ports
-origin_coords = [my_nodes[origin_port]['y'], my_nodes[origin_port]['x']]
-destination_coords = [my_nodes[destination_port]['y'], my_nodes[destination_port]['x']]
+    # Get the coordinates for the origin and destination ports
+    origin_coords = [my_nodes[origin_port]['y'], my_nodes[origin_port]['x']]
+    destination_coords = [my_nodes[destination_port]['y'], my_nodes[destination_port]['x']]
 
-# Create a new map object centered at the origin port
-longest_path_map = folium.Map(location=origin_coords, zoom_start=3)
+    # Create a new map object centered at the origin port
+    longest_path_map = folium.Map(location=origin_coords, zoom_start=3)
 
-# Get the route for the longest path
-route = sr.searoute([my_nodes[origin_port]['x'], my_nodes[origin_port]['y']],
-                    [my_nodes[destination_port]['x'], my_nodes[destination_port]['y']],
-                    speed_knot=12.5, units="naut")
-coordinates = route['geometry']['coordinates']
-coordinates = [[coord[1], coord[0]] for coord in coordinates]
+    # Get the route for the longest path
+    route = sr.searoute([my_nodes[origin_port]['x'], my_nodes[origin_port]['y']],
+                        [my_nodes[destination_port]['x'], my_nodes[destination_port]['y']],
+                        speed_knot=12.5, units="naut")
+    coordinates = route['geometry']['coordinates']
+    coordinates = [[coord[1], coord[0]] for coord in coordinates]
 
-# Draw the longest path on the map
-folium.PolyLine(locations=coordinates, color='red', weight=2.5).add_to(longest_path_map)
+    # Draw the longest path on the map
+    folium.PolyLine(locations=coordinates, color='red', weight=2.5).add_to(longest_path_map)
 
-# Save the longest path map as an HTML file
-longest_path_map.save('longest_path_map.html')
+    # Save the longest path map as an HTML file
+    longest_path_map.save('longest_path_map.html')
