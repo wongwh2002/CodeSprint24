@@ -23,4 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 .env
-junk.txt
+"junk.txt"
