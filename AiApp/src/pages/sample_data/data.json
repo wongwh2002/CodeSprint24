@@ -1,0 +1,15 @@
+[
+    {
+      "port": "Port A",
+      "cargo_to_pick_up": "Electronics",
+      "cargo_to_drop_off": "Textiles",
+      "isDone": true
+    },
+    {
+      "port": "Port B",
+      "cargo_to_pick_up": "Furniture",
+      "cargo_to_drop_off": "Automobiles",
+      "isDone": false
+    }
+]
+  

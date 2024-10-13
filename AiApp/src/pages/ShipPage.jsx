@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PopupComponent from "../components/PopUpComponent";
 import ShipMap from "../components/ShipMap";
+import CargoGrid from "../components/CargoGrid";
 
 const ShipPage = () => {
     const [isPopupVisible, setPopupVisible] = useState(false);
@@ -33,8 +34,16 @@ const ShipPage = () => {
                     {isPopupVisible && (
                         <PopupComponent onClose={handleClosePopup}>
                             <h2 className="mb-5">Container Status</h2>
-                            <div className="overflow-hidden h-[60vh] flex rounded-lg">
-                                <ShipMap ctr_lat={2.6720456612354546} ctr_lng={103.22719922118173}/>
+                            <div className="overflow-y-auto h-[60vh]">
+                                <div className="overflow-hidden h-[60vh] flex rounded-lg">
+                                    <ShipMap ctr_lat={1.353823011276384} ctr_lng={103.75930434583789}/>
+                                </div>
+                                <div className="my-5 grid grid-cols-3">
+                                    <div className="col-span-1 text-2xl font-bold">Port Name</div>
+                                    <div className="col-span-1 text-2xl font-bold"> Cargo (pick up)</div>
+                                    <div className="col-span-1 text-2xl font-bold"> Cargo (drop off)</div>
+                                </div>
+                                <CargoGrid />
                             </div>
                         </PopupComponent>
                     )}
