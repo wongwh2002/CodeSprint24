@@ -1,0 +1,26 @@
+.wave-text {
+    display: inline-block;
+    transition: color 0.3s ease;
+    color: black; /* Initial color */
+}
+
+.wave-text:hover {
+    color: grey; /* Change to grey on hover */
+}
+
+@keyframes wave {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5; /* Adjust the opacity at the middle of the wave */
+    }
+}
+
+.wave-text {
+    display: inline-block;
+    animation: wave 1s ease-in-out infinite; /* Adjust the duration as needed */
+    animation-fill-mode: both; /* Keeps the styles at the end of the animation */
+}
+
+
