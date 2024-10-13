@@ -1,6 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +9,8 @@ const Login = () => {
 
   const { id, password } = formData;
 
+  const navigate = useNavigate(); // Hook for navigating programmatically
+
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
@@ -17,9 +18,22 @@ const Login = () => {
     }));
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault(); // Prevent form submission from refreshing the page
+
+    // Determine the route based on the user ID
+    let user = "/ship";
+    if (id === "admin") {
+      user = "/admin";
+    }
+
+    // Navigate to the appropriate route
+    navigate(user);
+  };
+
   return (
     <div className="grid grid-flow-row justify-items-end">
-      <form className="space-y-3 grid justify-items-end">
+      <form onSubmit={onSubmit} className="space-y-3 grid justify-items-end">
         <input
           type="text"
           name="id"
@@ -46,9 +60,7 @@ const Login = () => {
           type="submit"
           className="w-1/2 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#444444] hover:bg-[#222222] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
         >
-          <NavLink to="/admin" className="w-full grid justify-items-end">
-            Register
-          </NavLink>
+          Login
         </button>
       </form>
     </div>
