@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "public",
     "site": "codesprint-psa",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [

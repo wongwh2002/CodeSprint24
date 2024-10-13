@@ -10,6 +10,7 @@ import StartPage from "./pages/StartPage";
 import AdminPage from "./pages/AdminPage";
 import ShipPage from "./pages/ShipPage";
 import "./index.css";
+import App from "./App";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    {/* <App /> */}
     <RouterProvider router={router} />
   </StrictMode>
 );
