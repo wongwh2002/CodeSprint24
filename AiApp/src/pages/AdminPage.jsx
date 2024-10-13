@@ -11,16 +11,18 @@ const AdminPage = () => {
     return (
         <div className="flex flex-col items-center bg-[#141A22] w-[100vw] h-[100vh] overflow-y-auto">
             <div className="w-full">
-                <img src='../../psa_logo_white.png' className="pl-32 h-36"/>
+                <NavLink to='/'>
+                    <img src='../../psa_logo_white.png' className="pl-32 h-36"/>
+                </NavLink>
             </div>
-            <div className="flex flex-col rounded-lg overflow-hidden overflow-y-auto">
+            <div className="flex flex-col bg-white rounded-lg">
                 {/* <AdminMap /> */}
-                <LocalHtmlEmbed />
-                <div className="bg-white ">
-                    <div className="m-5 space-y-5">
-                        <CsvComponent prompt='Input your Ship Information'/>
-                        <CsvComponent prompt='Input your Cargo Information'/>
-                    </div>
+                <div className="w-full overflow-hidden rounded-lg">
+                    <LocalHtmlEmbed />
+                </div>
+                <div className="m-5 space-y-5">
+                    <CsvComponent prompt='Input your Ship Information'/>
+                    <CsvComponent prompt='Input your Cargo Information'/>
                 </div>
             </div>
             <NavLink to='/'>

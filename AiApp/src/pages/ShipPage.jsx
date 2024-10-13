@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import PopupComponent from "../components/PopUpComponent";
 import ShipMap from "../components/ShipMap";
 import CargoGrid from "../components/CargoGrid";
 import FixedShipMap from "../components/FixedShipMap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 const ShipPage = () => {
     const [isPopupVisible, setPopupVisible] = useState(false);
@@ -18,10 +21,14 @@ const ShipPage = () => {
     return (
         <div className="flex flex-col items-center bg-[#141A22] w-[100vw] h-[100vh] overflow-y-auto">
             <div className="w-full">
-                <img src='../../psa_logo_white.png' className="pl-32 h-36"/>
+                <NavLink to='/'>
+                    <img src='../../psa_logo_white.png' className="pl-32 h-36"/>
+                </NavLink>
             </div>
-            <div className="w-4/5 h-[75vh] flex bg-white rounded-lg flex flex-col items-center overflow-hidden overflow-y-auto">
-                <FixedShipMap />
+            <div className="w-4/5 h-[200vh] bg-white rounded-lg flex flex-col items-center">
+                <div className="w-full overflow-hidden rounded-lg">
+                    <FixedShipMap />
+                </div>
                 <div className="w-4/5 p-10 text-3xl space-y-5">
                     <div className="font-semibold text-5xl w-full text-center">Star Quest</div>
                     <div className="flex flex-rows">
@@ -53,6 +60,12 @@ const ShipPage = () => {
                     )}
                 </div>
             </div>
+            <NavLink to='/'>
+                <div className="m-5 text-white"> 
+                    <FontAwesomeIcon icon={faSignOutAlt} className="mr-2 text-white" />
+                    Logout 
+                </div>
+            </NavLink>
         </div>
     )
 }
