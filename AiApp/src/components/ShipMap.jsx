@@ -3,7 +3,7 @@ import 'leaflet/dist/leaflet.css';
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 
-const Map = () => {
+const ShipMap = ( {ctr_lat, ctr_lng }) => {
   const [csvData, setCsvData] = useState([]);
   const [clickedLineIndex, setClickedLineIndex] = useState(null); // Track which line is clicked
 
@@ -40,24 +40,22 @@ const Map = () => {
 
   const multiPolyline = csvData.reduce((lines, curr, index, array) => {
     if (index < array.length - 1) {
-        for (let i = index; i < array.length - 1; i++) {
-            const next = array[i + 1];
-            const currentCoords = [parseFloat(curr.latitude.trim()), parseFloat(curr.longitude.trim())];
-            const nextCoords = [parseFloat(next.latitude.trim()), parseFloat(next.longitude.trim())];
-      
-            // Control point is halfway between the two points but offset for the curve
-            const controlCoords = [
-              (currentCoords[0] + nextCoords[0]) / 2 - 0.1, // You can adjust the offset for the curve effect
-              (currentCoords[1] + nextCoords[1]) / 2 - 0.1
-            ];
-      
-            if (!isNaN(currentCoords[0]) && !isNaN(currentCoords[1]) &&
-                !isNaN(nextCoords[0]) && !isNaN(nextCoords[1])) {
-              const curvePoints = calculateBezierCurve(currentCoords, controlCoords, nextCoords);
-              lines.push(curvePoints); // Add the calculated Bezier curve points
-            }
-          }
-          return lines;
+        const next = array[index + 1];
+        const currentCoords = [parseFloat(curr.latitude.trim()), parseFloat(curr.longitude.trim())];
+        const nextCoords = [parseFloat(next.latitude.trim()), parseFloat(next.longitude.trim())];
+  
+        // Control point is halfway between the two points but offset for the curve
+        const controlCoords = [
+          (currentCoords[0] + nextCoords[0]) / 2 - 0.1, // You can adjust the offset for the curve effect
+          (currentCoords[1] + nextCoords[1]) / 2 - 0.1
+        ];
+  
+        if (!isNaN(currentCoords[0]) && !isNaN(currentCoords[1]) &&
+            !isNaN(nextCoords[0]) && !isNaN(nextCoords[1])) {
+          const curvePoints = calculateBezierCurve(currentCoords, controlCoords, nextCoords);
+          lines.push(curvePoints); // Add the calculated Bezier curve points
+        }
+      return lines;
     }
     return lines;
   }, []);
@@ -65,10 +63,10 @@ const Map = () => {
   return (
     <div id="map" className="flex">
       <MapContainer
-        center={[1.363128028154264, 103.80666161466776]}
+        center={[ctr_lat || 1.363128028154264, ctr_lng || 103.80666161466776]}
         zoom={10}
         scrollWheelZoom={false}
-        className="w-[80vw] h-[75vh]"
+        className="w-[80vw] h-[60vh]"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -81,7 +79,7 @@ const Map = () => {
           <Polyline
             key={index}
             positions={line}
-            color={clickedLineIndex === index ? "red" : "blue"} // Change color based on clicked state
+            color={"red"} // Change color based on clicked state
             eventHandlers={{
               click: () => {
                 setClickedLineIndex(index); // Set clicked line index on click
@@ -112,4 +110,4 @@ const MyComponent = ({ data }) => {
   }
 };
 
-export default Map;
+export default ShipMap;
