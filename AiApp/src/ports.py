@@ -1,6 +1,8 @@
 import searoute as sr
 import folium
 import csv
+from collections import deque
+import heapq
 
 portData = [
     {
@@ -109,6 +111,29 @@ portData = [
         "Location": {"lat": 35.05386685062469, "lng": 130.63155968504674},
     },
 ]
+# const markers = [
+#             { coords: [1.2395633230556833, 103.61659118396314], popup: 'Tuas' },
+#             { coords: [1.2886391308540717, 103.666303667014], popup: 'Jurong' },
+#             { coords: [1.293157652875155, 103.77256072531563], popup: 'Pasir Panjang' },
+#             { coords: [1.2642907896740723, 103.83410701602287], popup: 'Brani' },
+#             { coords: [-5.503645007056072, 107.0328982212003], popup: 'Jakarta' },
+#             { coords: [18.80506733391735, 73.07964791060009], popup: 'Ameya' },
+#             { coords: [8.553861979319608, 78.37834754736443], popup: 'Sical' },
+#             { coords: [12.785017886008374, 80.22405056171904], popup: 'Baranagar' },
+#             { coords: [13.30240288070266, 100.89679655084919], popup: 'Laem Chabang' },
+#             { coords: [12.655760354441844, 101.12242050350875], popup: 'Thai Connectivity' },
+#             { coords: [10.588901005461771, 107.01518758772386], popup: 'Cang Container Quoc Te' },
+#             { coords: [21.55288031841085, 106.15009727313961], popup: 'Tan Cang Que Vo' },
+#             { coords: [22.22569762870952, 108.786816095586], popup: 'Qinzhou' },
+#             { coords: [22.956013190388607, 113.73066362406695], popup: 'Guang Zhou' },
+#             { coords: [26.110387475192258, 119.41241380126344], popup: 'Fuzhou' },
+#             { coords: [31.277610227918167, 119.83420787374205], popup: 'DingShuZhen' },
+#             { coords: [38.78172961946943, 117.4709900687863], popup: 'TianJin' },
+#             { coords: [38.521531342662804, 121.52466762991293], popup: 'Dalian' },
+#             { coords: [36.94059016874591, 126.52235229431564], popup: 'Hanjin Incheon' },
+#             { coords: [36.27194770083046, 128.68801564889012], popup: 'Busan' },
+#             { coords: [35.05386685062469, 130.63155968504674], popup: 'Hibikimachi' }
+#         ];
 
 # Create a new variable to store the nodes
 my_nodes = {
@@ -180,14 +205,14 @@ def doStuff():
 
     # Save the map object as an HTML file
     m.save('map.html')
-
+    
     # Find the longest path in the adjacency matrix
     longest_path = max(fixed_time, key=fixed_time.get)
     longest_duration = fixed_time[longest_path]
 
     # Extract the origin and destination ports
     origin_port, destination_port = longest_path
-
+    
     # Get the coordinates for the origin and destination ports
     origin_coords = [my_nodes[origin_port]['y'], my_nodes[origin_port]['x']]
     destination_coords = [my_nodes[destination_port]['y'], my_nodes[destination_port]['x']]
@@ -207,3 +232,96 @@ def doStuff():
 
     # Save the longest path map as an HTML file
     longest_path_map.save('longest_path_map.html')
+
+    # Create markers for the longest path
+    # Perform BFS to find the shortest path from Ameya to Tianjin
+
+    def bfs_shortest_path(start, goal):
+        queue = deque([(start, [start])])
+        visited = set()
+
+        while queue:
+            current_port, path = queue.popleft()
+            if current_port == goal:
+                return path
+
+            if current_port not in visited:
+                visited.add(current_port)
+                for neighbor in adjacency_matrix[current_port]:
+                    if neighbor not in visited:
+                        queue.append((neighbor, path + [neighbor]))
+
+        return None
+    def heuristic(port1, port2):
+        # Using straight-line distance as the heuristic
+        return ((my_nodes[port1]['x'] - my_nodes[port2]['x']) ** 2 + (my_nodes[port1]['y'] - my_nodes[port2]['y']) ** 2) ** 0.5
+
+    def a_star_search(start, goal):
+        open_set = []
+        heapq.heappush(open_set, (0, start, [start]))
+        g_costs = {start: 0}
+        visited = set()
+
+        while open_set:
+            _, current_port, path = heapq.heappop(open_set)
+
+            if current_port == goal:
+                return path
+
+            if current_port not in visited:
+                visited.add(current_port)
+                for neighbor in adjacency_matrix[current_port]:
+                    tentative_g_cost = g_costs[current_port] + adjacency_matrix[current_port][neighbor]
+                    if neighbor not in g_costs or tentative_g_cost < g_costs[neighbor]:
+                        g_costs[neighbor] = tentative_g_cost
+                        f_cost = tentative_g_cost + heuristic(neighbor, goal)
+                        heapq.heappush(open_set, (f_cost, neighbor, path + [neighbor]))
+
+        return None
+
+    def dijkstra_search(start, goal):
+        open_set = []
+        heapq.heappush(open_set, (0, start, [start]))
+        g_costs = {start: 0}
+        visited = set()
+
+        while open_set:
+            current_g_cost, current_port, path = heapq.heappop(open_set)
+
+            if current_port == goal:
+                return path
+
+            if current_port not in visited:
+                visited.add(current_port)
+                for neighbor in adjacency_matrix[current_port]:
+                    tentative_g_cost = current_g_cost + adjacency_matrix[current_port][neighbor]
+                    if neighbor not in g_costs or tentative_g_cost < g_costs[neighbor]:
+                        g_costs[neighbor] = tentative_g_cost
+                        heapq.heappush(open_set, (tentative_g_cost, neighbor, path + [neighbor]))
+
+        return None
+
+    # Find the shortest path from Ameya to Tianjin using A* search
+    shortest_path_a_star = a_star_search("Ameya", "TianJin")
+    print("A* Shortest Path:", shortest_path_a_star)
+
+    # Find the shortest path from Ameya to Tianjin using Dijkstra's search
+    shortest_path_dijkstra = dijkstra_search("Ameya", "TianJin")
+    print("Dijkstra's Shortest Path:", shortest_path_dijkstra)
+
+    # Find the shortest path from Ameya to Tianjin
+    shortest_path = bfs_shortest_path("Ameya", "TianJin")
+
+    # Create markers for the shortest path
+    longest_path_markers = [
+        {'coords': [my_nodes[port]['y'], my_nodes[port]['x']], 'popup': port}
+        for port in shortest_path
+    ]
+
+    # Add markers to the longest path map
+    for marker in longest_path_markers:
+        folium.Marker(location=marker['coords'], popup=marker['popup']).add_to(longest_path_map)
+        
+    print(longest_path_markers)
+
+doStuff()
