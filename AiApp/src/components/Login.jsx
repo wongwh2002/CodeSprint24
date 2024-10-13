@@ -47,8 +47,8 @@ const Login = () => {
                     type="submit"
                     className="w-1/2 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#444444] hover:bg-[#222222] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                 >
-                    <NavLink to='/admin' className='w-full grid justify-items-end'>
-                            Register
+                    <NavLink to='/admin' className='w-full justify-content grid'>
+                            Login
                     </NavLink>
                 </button>
             </form>
