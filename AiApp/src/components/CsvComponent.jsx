@@ -20,7 +20,7 @@ const CsvComponent = ({ prompt }) => {
 
   return (
     <div className=''>
-        <div className='flex flex-row space-x-5'>
+        <div className='flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-5'>
             <div className="text-xl font-semibold"> {prompt} </div>
             <input type="file" accept=".csv" onChange={handleFileUpload} />
         </div>

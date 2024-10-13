@@ -10,12 +10,13 @@ import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 const AdminPage = () => {
     return (
         <div className="flex flex-col items-center bg-[#141A22] w-[100vw] h-[100vh] overflow-y-auto">
-            <div className="w-full">
+            <div className="flex flex-col lg:flex-row w-full justify-center">
                 <NavLink to='/'>
-                    <img src='../../psa_logo_white.png' className="pl-32 h-36"/>
+                    <img src='../../psa_logo_white.png' className="lg:pl-32 h-36"/>
                 </NavLink>
+                <div className="text-white text-3xl lg:text-5xl mt-14 text-center lg:ml-auto lg:mr-[10vw] my-5"> Available Shipping Routes</div>
             </div>
-            <div className="flex flex-col bg-white rounded-lg">
+            <div className="w-4/5 h-[200vh] bg-white rounded-lg flex flex-col">
                 {/* <AdminMap /> */}
                 <div className="w-full overflow-hidden rounded-lg">
                     <LocalHtmlEmbed />
@@ -29,8 +30,8 @@ const AdminPage = () => {
                 {/* <div className="z-10 bg-[#444444] w-24 text-center text-white rounded-sm p-2">
                     Logout
                 </div> */}
-                <div className="m-5 text-white"> 
-                    <FontAwesomeIcon icon={faSignOutAlt} className="mr-2 text-white" />
+                <div className="m-5 text-white group hover:text-[#cccccc] transition duration-200"> 
+                    <FontAwesomeIcon icon={faSignOutAlt} className="mr-2 text-white group-hover:text-[#cccccc] transition duration-200" />
                     Logout 
                 </div>
             </NavLink>
