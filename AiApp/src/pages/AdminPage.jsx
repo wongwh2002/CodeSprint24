@@ -16,12 +16,12 @@ const AdminPage = () => {
                 </NavLink>
                 <div className="text-white text-3xl lg:text-5xl mt-14 text-center lg:ml-auto lg:mr-[10vw] my-5"> Available Shipping Routes</div>
             </div>
-            <div className="w-4/5 h-[200vh] bg-white rounded-lg flex flex-col">
+            <div className="w-4/5 bg-white rounded-lg flex flex-col">
                 {/* <AdminMap /> */}
                 <div className="w-full overflow-hidden rounded-lg">
                     <LocalHtmlEmbed />
                 </div>
-                <div className="m-5 space-y-5">
+                <div className="m-5 space-y-5 flex flex-col">
                     <CsvComponent prompt='Input your Ship Information'/>
                     <CsvComponent prompt='Input your Cargo Information'/>
                 </div>
